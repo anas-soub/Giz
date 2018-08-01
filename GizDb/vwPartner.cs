@@ -12,14 +12,9 @@ namespace GizDb
     using System;
     using System.Collections.Generic;
     
-    public partial class Project
+    public partial class vwPartner
     {
-        public System.Guid Id { get; set; }
-        public string Name { get; set; }
-        public System.Guid SubPartnerId { get; set; }
-        public string Site { get; set; }
-        public System.DateTime Date { get; set; }
-    
-        public virtual Partner Partner { get; set; }
+        public string PartnerName { get; set; }
+        public string PartnerType { get; set; }
     }
 }

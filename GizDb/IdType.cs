@@ -22,7 +22,6 @@ namespace GizDb
         }
     
         public int Id { get; set; }
-        public int Type { get; set; }
         public bool IsPersonId { get; set; }
         public bool IsFamilyId { get; set; }
         public string NameA { get; set; }

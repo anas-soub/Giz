@@ -12,6 +12,8 @@ namespace GizDb
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class GizEntities : DbContext
     {
@@ -25,6 +27,7 @@ namespace GizDb
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Attendence> Attendences { get; set; }
         public virtual DbSet<Beneficiary> Beneficiaries { get; set; }
         public virtual DbSet<Family> Families { get; set; }
         public virtual DbSet<FamilyId> FamilyIds { get; set; }
@@ -35,8 +38,29 @@ namespace GizDb
         public virtual DbSet<Payment> Payments { get; set; }
         public virtual DbSet<PersonId> PersonIds { get; set; }
         public virtual DbSet<Project> Projects { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Site> Sites { get; set; }
+        public virtual DbSet<SurvyResult> SurvyResults { get; set; }
+        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Utility> Utilities { get; set; }
-        public virtual DbSet<Attendence> Attendences { get; set; }
+        public virtual DbSet<vRegistation> vRegistations { get; set; }
+        public virtual DbSet<Supervisor> Supervisors { get; set; }
+        public virtual DbSet<vwPartner> vwPartners { get; set; }
+    
+        public virtual int AddUtilityOption(Nullable<int> parent, string name, string nameA)
+        {
+            var parentParameter = parent.HasValue ?
+                new ObjectParameter("Parent", parent) :
+                new ObjectParameter("Parent", typeof(int));
+    
+            var nameParameter = name != null ?
+                new ObjectParameter("Name", name) :
+                new ObjectParameter("Name", typeof(string));
+    
+            var nameAParameter = nameA != null ?
+                new ObjectParameter("NameA", nameA) :
+                new ObjectParameter("NameA", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AddUtilityOption", parentParameter, nameParameter, nameAParameter);
+        }
     }
 }

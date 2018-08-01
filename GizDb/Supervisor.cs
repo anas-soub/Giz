@@ -12,12 +12,12 @@ namespace GizDb
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class Supervisor
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public System.Guid Id { get; set; }
+        public string Name { get; set; }
+        public string PartnerId { get; set; }
+        public System.Guid CurrentSite { get; set; }
+        public int Status { get; set; }
     }
 }

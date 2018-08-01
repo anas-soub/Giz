@@ -19,5 +19,11 @@ namespace GizDb
         public System.Guid ProjectId { get; set; }
         public System.DateTime date { get; set; }
         public int WorkingHours { get; set; }
+        public System.Guid CurrentPaymentId { get; set; }
+        public System.Guid SupervisorId { get; set; }
+        public string SiteId { get; set; }
+        public int WorkTypeId { get; set; }
+        public bool IsUnderWorkPermit { get; set; }
+        public bool IsUnderSocialSecurity { get; set; }
     }
 }

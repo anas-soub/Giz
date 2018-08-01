@@ -100,10 +100,25 @@
       <DependentUpon>GizModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagram.cs">
+    <Compile Include="Site.cs">
+      <DependentUpon>GizModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supervisor.cs">
+      <DependentUpon>GizModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SurvyResult.cs">
+      <DependentUpon>GizModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
       <DependentUpon>GizModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Utility.cs">
+      <DependentUpon>GizModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vRegistation.cs">
+      <DependentUpon>GizModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwPartner.cs">
       <DependentUpon>GizModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>

@@ -15,12 +15,13 @@ namespace GizDb
     public partial class Family
     {
         public System.Guid Id { get; set; }
+        public System.Guid FamilyId { get; set; }
         public decimal Income { get; set; }
         public int IncomeCurrency { get; set; }
         public int MembersCount { get; set; }
         public int RegularIncomeMembersCount { get; set; }
         public int Status { get; set; }
     
-        public virtual FamilyId FamilyId { get; set; }
+        public virtual FamilyId FamilyId1 { get; set; }
     }
 }

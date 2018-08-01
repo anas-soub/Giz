@@ -12,19 +12,12 @@ namespace GizDb
     using System;
     using System.Collections.Generic;
     
-    public partial class Partner
+    public partial class SurvyResult
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Partner()
-        {
-            this.Projects = new HashSet<Project>();
-        }
-    
         public System.Guid Id { get; set; }
-        public string Name { get; set; }
-        public int Type { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Project> Projects { get; set; }
+        public System.Guid SurvyId { get; set; }
+        public System.Guid BeneficiaryId { get; set; }
+        public int QuestionNumber { get; set; }
+        public int AnswerNumber { get; set; }
     }
 }

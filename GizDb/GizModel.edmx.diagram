@@ -5,29 +5,33 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="5b66d9ac5af0466d84bbcccdc34432c1" Name="Diagram1">
-        <EntityTypeShape EntityType="GizModel.Beneficiary" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="GizModel.Family" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="GizModel.FamilyId" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="GizModel.HomeTown" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="GizModel.Housing" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="GizModel.IdType" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="GizModel.Partner" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="GizModel.Payment" Width="1.5" PointX="3" PointY="14.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="GizModel.PersonId" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="GizModel.Project" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="GizModel.sysdiagram" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="GizModel.Utility" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="GizModel.Attendence" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="GizModel.FK_Beneficiary_FamilyId" ManuallyRouted="false" />
-        <AssociationConnector Association="GizModel.FK_Beneficiary_HomeTown" ManuallyRouted="false" />
-        <AssociationConnector Association="GizModel.FK_Beneficiary_Housing" ManuallyRouted="false" />
-        <AssociationConnector Association="GizModel.FK_Beneficiary_Payment" ManuallyRouted="false" />
-        <AssociationConnector Association="GizModel.FK_Beneficiary_PersonId" ManuallyRouted="false" />
-        <AssociationConnector Association="GizModel.FK_FamilyId_Family" ManuallyRouted="false" />
-        <AssociationConnector Association="GizModel.FK_FamilyId_IdType" ManuallyRouted="false" />
-        <AssociationConnector Association="GizModel.FK_PersonId_IdType" ManuallyRouted="false" />
-        <AssociationConnector Association="GizModel.FK_Project_Partner" ManuallyRouted="false" />
-        <AssociationConnector Association="GizModel.FK_Project_Partner1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GizModel.Attendence" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GizModel.Beneficiary" Width="1.5" PointX="8.25" PointY="4.625" />
+        <EntityTypeShape EntityType="GizModel.Family" Width="1.5" PointX="5.25" PointY="5.125" />
+        <EntityTypeShape EntityType="GizModel.FamilyId" Width="1.5" PointX="3" PointY="5.25" />
+        <EntityTypeShape EntityType="GizModel.HomeTown" Width="1.5" PointX="6" PointY="11.875" />
+        <EntityTypeShape EntityType="GizModel.Housing" Width="1.5" PointX="6" PointY="2.25" />
+        <EntityTypeShape EntityType="GizModel.IdType" Width="1.5" PointX="0.75" PointY="6.25" />
+        <EntityTypeShape EntityType="GizModel.Partner" Width="1.5" PointX="8.75" PointY="1.125" />
+        <EntityTypeShape EntityType="GizModel.Payment" Width="1.5" PointX="6" PointY="8.875" />
+        <EntityTypeShape EntityType="GizModel.PersonId" Width="1.5" PointX="3" PointY="8.5" />
+        <EntityTypeShape EntityType="GizModel.Project" Width="1.5" PointX="11" PointY="0.875" />
+        <EntityTypeShape EntityType="GizModel.Site" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GizModel.SurvyResult" Width="1.5" PointX="10.75" PointY="4.75" />
+        <EntityTypeShape EntityType="GizModel.User" Width="1.5" PointX="10.75" PointY="10.75" />
+        <EntityTypeShape EntityType="GizModel.Utility" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="GizModel.vRegistation" Width="1.5" PointX="12.75" PointY="4.75" />
+        <AssociationConnector Association="GizModel.FK_Beneficiary_FamilyId" />
+        <AssociationConnector Association="GizModel.FK_Beneficiary_HomeTown" />
+        <AssociationConnector Association="GizModel.FK_Beneficiary_Housing" />
+        <AssociationConnector Association="GizModel.FK_Beneficiary_Payment" />
+        <AssociationConnector Association="GizModel.FK_Beneficiary_PersonId" />
+        <AssociationConnector Association="GizModel.FK_Family_FamilyId" />
+        <AssociationConnector Association="GizModel.FK_FamilyId_IdType" />
+        <AssociationConnector Association="GizModel.FK_PersonId_IdType" />
+        <AssociationConnector Association="GizModel.FK_Project_Partner1" />
+        <EntityTypeShape EntityType="GizModel.Supervisor" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="GizModel.vwPartner" Width="1.5" PointX="8.375" PointY="13.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -13,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GizWPF
+namespace GizWPF.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PersonalInformation.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PersonalInformation : UserControl
     {
-        public MainWindow()
+        public PersonalInformation()
         {
             InitializeComponent();
-           
-           
         }
     }
 }

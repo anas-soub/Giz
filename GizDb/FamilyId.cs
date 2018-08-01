@@ -18,6 +18,7 @@ namespace GizDb
         public FamilyId()
         {
             this.Beneficiaries = new HashSet<Beneficiary>();
+            this.Families = new HashSet<Family>();
         }
     
         public System.Guid Id { get; set; }
@@ -27,7 +28,8 @@ namespace GizDb
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Beneficiary> Beneficiaries { get; set; }
-        public virtual Family Family { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Family> Families { get; set; }
         public virtual IdType IdType { get; set; }
     }
 }
