@@ -17,6 +17,14 @@ namespace GizWPF.VML
          typeof(bool), typeof(ViewModelLocator), new PropertyMetadata(false,
         AutoHookedUpViewModelChanged));
 
+
+        /* Using a DependencyProperty as the backing store for AutoHookedUpViewModel.
+       This enables animation, styling, binding, etc...*/
+        public static readonly DependencyProperty AutoHookedUp2ViewModelProperty =
+         DependencyProperty.RegisterAttached("AutoHookedUpViewModel2",
+         typeof(bool), typeof(ViewModelLocator), new PropertyMetadata(false,
+        AutoHookedUpViewModel2Changed));
+
         public static bool GetAutoHookedUpViewModel(DependencyObject obj)
         {
             return (bool)obj.GetValue(AutoHookedUpViewModelProperty);
@@ -33,6 +41,19 @@ namespace GizWPF.VML
         
         private static void AutoHookedUpViewModelChanged(DependencyObject d,
     DependencyPropertyChangedEventArgs e)
+        {
+            if (DesignerProperties.GetIsInDesignMode(d)) return;
+            var viewType = d.GetType();
+            string str = viewType.FullName;
+            str = str.Replace(".View.", ".ViewModel.");
+            var viewTypeName = str;
+            var viewModelTypeName = viewTypeName + "Model";
+            var viewModelType = Type.GetType(viewModelTypeName);
+            var viewModel = Activator.CreateInstance(viewModelType);
+            ((FrameworkElement)d).DataContext = viewModel;
+        }
+        private static void AutoHookedUpViewModel2Changed(DependencyObject d,
+  DependencyPropertyChangedEventArgs e)
         {
             if (DesignerProperties.GetIsInDesignMode(d)) return;
             var viewType = d.GetType();
