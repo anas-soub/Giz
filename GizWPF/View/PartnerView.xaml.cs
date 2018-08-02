@@ -18,9 +18,9 @@ namespace GizWPF.View
     /// <summary>
     /// Interaction logic for Partner.xaml
     /// </summary>
-    public partial class Partner : UserControl
+    public partial class PartnerView : UserControl
     {
-        public Partner()
+        public PartnerView()
         {
             InitializeComponent();
         }

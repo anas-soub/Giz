@@ -66,12 +66,13 @@
     </ApplicationDefinition>
     <Compile Include="ViewModel\BeneficiaryViewModel.cs" />
     <Compile Include="ViewModel\PartnerViewModel.cs" />
-    <Compile Include="View\Partner.xaml.cs">
-      <DependentUpon>Partner.xaml</DependentUpon>
+    <Compile Include="View\PartnerView.xaml.cs">
+      <DependentUpon>PartnerView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\PersonalInformation.xaml.cs">
-      <DependentUpon>PersonalInformation.xaml</DependentUpon>
+    <Compile Include="View\PersonalInformationView.xaml.cs">
+      <DependentUpon>PersonalInformationView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VML\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -84,11 +85,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\Partner.xaml">
+    <Page Include="View\PartnerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\PersonalInformation.xaml">
+    <Page Include="View\PersonalInformationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
